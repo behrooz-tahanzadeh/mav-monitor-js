@@ -21,7 +21,7 @@ var Main =
 		
 		if(this.url)
 		{
-			this.ros = new ROSLIB.Ros({url : 'ws://localhost:9090'});
+			this.ros = new ROSLIB.Ros({url : this.url});
 			this.ros.on('connection', this.rosOnConnection.bind(this));
 			this.ros.on('error', this.rosOnError.bind(this));
 			this.ros.on('close', this.rosOnClose.bind(this));
@@ -86,12 +86,12 @@ var Main =
 			var t = ((2000-msg.channels[2])/10)+"%";
 			var l = ((msg.channels[3]-1000)/10)+"%";
 			
-			jQuery("#rc-interface>div.left>div").css({"left":l, "top":t});
+			jQuery("#rc-interface>div.left>div>div").css({"left":l, "top":t});
 			
 			t = ((2000-msg.channels[1])/10)+"%";
 			l = ((msg.channels[0]-1000)/10)+"%";
 			
-			jQuery("#rc-interface>div.right>div").css({"left":l, "top":t});
+			jQuery("#rc-interface>div.right>div>div").css({"left":l, "top":t});
 		});
 		
 		//=======================================
