@@ -1,7 +1,7 @@
 CACHE MANIFEST
 #v 0002
 
-js/main.js
+/js/main.js
 /index.html
 http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js
 http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js
