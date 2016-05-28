@@ -1,0 +1,53 @@
+div#MavState
+{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100vw;
+	height:100vh;
+	background:white;
+	transition:background 0.5s;
+}
+html[data-level="ok"] div#MavState{background-color:white;}
+html[data-level="warning"] div#MavState{background-color:yellow;}
+html[data-level="danger"] div#MavState{background-color:red;}
+
+div#MavState>h1
+{
+	text-align: center;
+	padding-top:40vh;
+	margin:0px;
+	color:black;
+	transition:color 0.5s;
+	font-size:6em;
+}
+
+html[data-level="danger"] div#MavState>h1{color:white}
+
+
+
+
+div#MavBattery
+{
+	position:fixed;
+	bottom:20px;
+	right:20px;
+	border:2px black solid;
+	padding:2px;
+	width:100px;
+	height:40px;
+	
+	transition:border-color 0.5s;
+}
+
+html[data-level="danger"] div#MavBattery{border-color:white;}
+
+div#MavBattery>div
+{
+	width:100%;
+	height:100%;
+	background-color:black;
+	transition:background-color 0.5s;
+}
+
+html[data-level="danger"] div#MavBattery>div{background-color:white;} 
